@@ -14,6 +14,6 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         transform.Translate(new Vector3(0, 0, -1) * Time.deltaTime * speed);
-        //transform.Translate(new Vector3(0, 0, 1));
+        //transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * speed);
     }
 }
