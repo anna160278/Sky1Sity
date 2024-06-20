@@ -7,6 +7,17 @@ TagManager:
   - Circle
   - Block
   - WayPoint
+  - Coin
+  - GrowUp
+  - GrowDown
+  - Health
+  - Ground
+  - Obstacle
+  - Door
+  - DeathCamera
+  - Animal
+  - Island
+  - Enemy
   layers:
   - Default
   - TransparentFX

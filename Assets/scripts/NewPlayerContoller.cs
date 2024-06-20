@@ -39,7 +39,7 @@ public class NewPlayerContoller : MonoBehaviour
             transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed * horizontalInput);     // Нужно не передвигать, а поворачивать вокруг вертикальной оси
             //print speed
             speed = Mathf.RoundToInt(playerRb.velocity.magnitude * 3.6f);  // 3.6 for km/h, 2.237 for mph
-            textSpeedometr.SetText("Speed: " + speed + "km/h");
+            textSpeedometr.SetText("speed: " + speed + "km/h");
             //print RPM
             rpm = Mathf.Round((speed % 30) * 40);   // не совсем корректное решение, приближённое
             textRpm.SetText("RPM: " + rpm);

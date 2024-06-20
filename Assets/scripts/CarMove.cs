@@ -10,7 +10,7 @@ public class CarMove : MonoBehaviour
     private float verticalInput;
     private float horizontalInput;
 
-    void FixedUpdate() {
+    void Update() {
         //transform.position = transform.position + new Vector3(0, 0, 1) * Time.deltaTime * 20;  // 1) сначала пишем так, машина начинает двигаться
 
         //transform.Translate(Vector3.forward * Time.deltaTime * speed);         // 2) улучшенный код, в инспекторе можно менять скорость (даже ставить с минусом)
