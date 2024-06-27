@@ -16,6 +16,7 @@ public class CarMovementLight : MonoBehaviour // Объявление класс
     //public float brakeSpeed = 20f; // Торможение до полной остановки
 
     private Vector3 startPosition;
+    private Quaternion startRotation;
 
     // step2 - check circle
     public GameManager manager;
@@ -23,6 +24,7 @@ public class CarMovementLight : MonoBehaviour // Объявление класс
 
     private void Start() {
         startPosition = transform.position;
+        startRotation = transform.rotation;
     }
 
     void Update() {
@@ -74,7 +76,7 @@ public class CarMovementLight : MonoBehaviour // Объявление класс
     }
     public void ResetToStartPosition() {
         transform.position = startPosition;
-        transform.rotation = Quaternion.identity;
+        transform.rotation = startRotation;
         speed = 0;
     }
 }
