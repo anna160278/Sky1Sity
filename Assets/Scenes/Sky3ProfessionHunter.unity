@@ -492,10 +492,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animals:
-  - {fileID: 206431701253843793, guid: c42faae35cae7ca4587bf6248be43d91, type: 3}
-  - {fileID: 6409506314401835424, guid: 5424c8fe9f9fc924c81335af061d53c3, type: 3}
-  - {fileID: 1677957282759013370, guid: de95ac3a61b688f408a32fc1232d2971, type: 3}
-  - {fileID: 892026275321175649, guid: 5466176ef5f7dab408f5bc1daddba8ad, type: 3}
+  - {fileID: 7815782548120806637, guid: 8b014dc603a7e7c4796f78ae3f8db583, type: 3}
+  - {fileID: 1386077055553976630, guid: 0837fa627ba60a04092166b6120aab41, type: 3}
+  - {fileID: 2946380079116776731, guid: a22a5ba5442fc2a43a128efca978a4ef, type: 3}
+  - {fileID: 22103043982796136, guid: a07163d23a97c104283f0ebf9775f957, type: 3}
+  - {fileID: 7519263135000470279, guid: 371f1a3ee341add43a1407ff700d788f, type: 3}
   minZ: 60
   maxZ: 120
   spawnX: 120
@@ -5810,9 +5811,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cfad910523c9e45acc3cc800888d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputControl: 0
   verticalRange: 30
   horizontalRange: 90
+  inputControl: 0
 --- !u!4 &1512530723
 Transform:
   m_ObjectHideFlags: 0

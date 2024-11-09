@@ -13,7 +13,6 @@ public class enemy4 : MonoBehaviour
     {
         player = GameObject.Find("player4").transform;
     }
-
     
     void Update()
     {

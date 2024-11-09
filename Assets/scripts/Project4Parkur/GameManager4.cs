@@ -14,10 +14,12 @@ public class GameManager4 : MonoBehaviour
     public PlayerController4 player;
     public int lifes;
     public TextMeshProUGUI textLifes;
+    public SoundManager4 soundManager;
+
 
     void Start() {
         coins = 0;
-        lifes = 5;
+        lifes = 3;
         UpdateText();
         Time.timeScale = 0f;
         startScreen.gameObject.SetActive(true);
@@ -25,12 +27,9 @@ public class GameManager4 : MonoBehaviour
 
     public void Update() {
         if (lifes <= 0) {
-            player.speed = 0;
-            player.animator.SetTrigger("death");
-            StartCoroutine(Lose(4));
+            StartCoroutine(Lose(2));
         }
     }
-
 
     public void UpdateText() {
         if (textCoins != null) {
@@ -39,7 +38,6 @@ public class GameManager4 : MonoBehaviour
         if (textLifes != null) {
             textLifes.text = "lifes: " + lifes.ToString();
         }
-
     }
 
     public void ResetPlayer() {
@@ -48,7 +46,6 @@ public class GameManager4 : MonoBehaviour
         loseScreen.gameObject.SetActive(false);
         player.ResetToStartPosition();
         Time.timeScale = 1f;
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // перезапускает текущий уровень
     }
 
     public void RestartGame() {
@@ -61,6 +58,7 @@ public class GameManager4 : MonoBehaviour
     public void GameOver() {
         loseScreen.gameObject.SetActive(true);
         Time.timeScale = 0f;
+        soundManager.PlayDieSound();
     }
 
     public void WinGame() {
@@ -69,8 +67,9 @@ public class GameManager4 : MonoBehaviour
     }
 
     IEnumerator Lose(float delay) {
+        player.speed = 0;
+        player.animator.SetTrigger("death");
         yield return new WaitForSeconds(delay);
         GameOver();
-
     }
 }

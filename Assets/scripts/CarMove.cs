@@ -29,10 +29,10 @@ public class CarMove : MonoBehaviour
         //}
 
         verticalInput = Input.GetAxis("Vertical");
-        //print(verticalInput);
+
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);     // 4) вариант кода, движение через GetAxis
         horizontalInput = Input.GetAxis("Horizontal");
-        //print(horizontalInput);
+
         //transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);     // такой вариант для движения вправо-влево для машины не подходит. 
         transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed * horizontalInput);     // Нужно не передвигать, а поворачивать вокруг вертикальной оси
 

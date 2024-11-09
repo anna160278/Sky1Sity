@@ -20,6 +20,7 @@ public class BulletMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Animal")) {
+            Debug.Log("попали в цель");
             Destroy(other.gameObject);
             Destroy(gameObject);
             gameManager.score++;

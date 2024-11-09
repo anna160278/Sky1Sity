@@ -18,6 +18,10 @@ TagManager:
   - Animal
   - Island
   - Enemy
+  - Water
+  - DamageDoor
+  - DeathDoor
+  - Check
   layers:
   - Default
   - TransparentFX

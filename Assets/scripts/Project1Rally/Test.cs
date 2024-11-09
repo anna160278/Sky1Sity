@@ -11,7 +11,7 @@ public class Test : MonoBehaviour
 
     public int apples;
     private float speed = 15.45f;
-    private GameObject panel;
+    private bool isBool = true;
 
     // самые часто используемые типы данных:
     // int
@@ -26,9 +26,7 @@ public class Test : MonoBehaviour
     //private float number2 = 5.5f; // 1.2f, 2.5, 
     //private string text = "Hello world";
     //private char letter = 'D';
-    //private bool isBool = true;
-
-    //private GameObject playerTransform;
+    //private GameObject panel;
     //private Transform player1;
 
     // Правиля именования переменных:
@@ -38,16 +36,19 @@ public class Test : MonoBehaviour
     // 4) не начинать с цифр и не использовать _ в качестве разделителя слов
 
     void Start() {
-        if (SceneManager.GetActiveScene().name == "RoadsCity") {
-            Canvas canvas = GameObject.FindObjectOfType<Canvas>();
-            panel = canvas.transform.Find("Panel").gameObject;
-            Debug.Log(panel.name);
+        Debug.Log("Привет из метода Start()");
+        Debug.Log("Начальная скорость машины равна = " + speed);
+        if (isBool == true) {
+            apples = 10;
+            Debug.Log("У вас в корзине было " + apples + " яблок");
         }
-
     }
 
-
     void Update() {
-
+        Debug.Log("Привет из метода Update()");
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            apples++;
+            Debug.Log("Теперь у вас " + apples + " яблок");
+        }
     }
 }
