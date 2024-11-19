@@ -23,11 +23,9 @@ public class Player5Controller : MonoBehaviour
     public Rigidbody rb;
     public float speed;
     public float jumpForce;
-
     private float xRotation;
-
     private bool grounded;
-
+    public GameManager5 gameManager;
     private Animator animator;
 
     private void Start() {
@@ -100,10 +98,13 @@ public class Player5Controller : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("DamageDoor")) {
-            Debug.Log("Нанести урон");
+            gameManager.HP -= 25;
         }
         if (other.gameObject.CompareTag("DeathDoor")) {
-            Debug.Log("Конец игры");
+            gameManager.HP = 0;
+        }
+        if (other.gameObject.CompareTag("Finish")) {
+            gameManager.WinGame();
         }
     }
 }
